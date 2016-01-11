@@ -46,7 +46,7 @@ public class FaceDetection extends javax.swing.JFrame {
                     if (webSource.grab()) {
                         try {
                             webSource.retrieve(frame);
-                            Graphics g = mainWindowPanel.getGraphics();
+                            Graphics g = webcamImagePanel.getGraphics();
                             faceDetector.detectMultiScale(frame, faceDetections);
                             for (Rect rect : faceDetections.toArray()) {
                                 Core.rectangle(frame, new Point(rect.x, rect.y), new Point(rect.x + rect.width, rect.y + rect.height),
@@ -82,20 +82,20 @@ public class FaceDetection extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        mainWindowPanel = new javax.swing.JPanel();
+        webcamImagePanel = new javax.swing.JPanel();
         startButton = new javax.swing.JButton();
         pauseButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        javax.swing.GroupLayout mainWindowPanelLayout = new javax.swing.GroupLayout(mainWindowPanel);
-        mainWindowPanel.setLayout(mainWindowPanelLayout);
-        mainWindowPanelLayout.setHorizontalGroup(
-            mainWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout webcamImagePanelLayout = new javax.swing.GroupLayout(webcamImagePanel);
+        webcamImagePanel.setLayout(webcamImagePanelLayout);
+        webcamImagePanelLayout.setHorizontalGroup(
+            webcamImagePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 907, Short.MAX_VALUE)
         );
-        mainWindowPanelLayout.setVerticalGroup(
-            mainWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        webcamImagePanelLayout.setVerticalGroup(
+            webcamImagePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 578, Short.MAX_VALUE)
         );
 
@@ -124,13 +124,13 @@ public class FaceDetection extends javax.swing.JFrame {
                 .addComponent(pauseButton)
                 .addGap(102, 102, 102))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(mainWindowPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(webcamImagePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(mainWindowPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(webcamImagePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(startButton)
@@ -193,8 +193,8 @@ public class FaceDetection extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel mainWindowPanel;
     private javax.swing.JButton pauseButton;
     private javax.swing.JButton startButton;
+    private javax.swing.JPanel webcamImagePanel;
     // End of variables declaration//GEN-END:variables
 }
